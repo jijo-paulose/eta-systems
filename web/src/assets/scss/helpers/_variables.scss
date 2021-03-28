@@ -1,0 +1,40 @@
+//fonts
+$proxima-nova-regular   : "proxima_novaregular", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$proxima-nova-semi-bold : "proxima_novasemibold", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$proxima-nova-bold      : "proxima_novabold", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$roboto                 : "Roboto", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+
+// ============== Define colors ============
+
+//base colors   
+$primary-color          : #e34234 !default;  
+
+//text colors
+$default-font-color     : #3B3B3B !default;
+$sub-font-color         : #706E7B !default;
+$title-font-color       : #0B2031 !default; 
+$link-color             : #2253ec !default;
+$border-color           : #e4e4e4 !default;
+$text-color             : #586581 !default;
+
+//Fonts
+$font-family-base       : $roboto !default;
+$title-font             : $proxima-nova-regular !default; 
+$title-font-semi        : $proxima-nova-semi-bold !default; 
+$title-font-bold        : $proxima-nova-bold !default; 
+$paragraph              : $roboto !default; 
+
+
+//background color
+$bg-color               : #F7F7F7 !default; 
+$bg-dark                : #F9F0EF !default; 
+
+//button colors
+$primary-button         : $primary-color !default;
+$secondary-button       : #fff !default;
+
+//radius
+$radius                 : 4px !default;
+$radius-large           : 5px !default;
+$radius-small           : 3px !default; 

@@ -1,0 +1,21 @@
+//////////////////////////
+/// Component: Table ///
+//////////////////////////
+
+.responsive-table {
+    overflow-x: auto;
+    width: 100%;
+    background-color: #fff;
+    @include box-shadow(0 2px 3px rgba(black, 0.15));
+    @include border-radius(2px);
+
+    .ant-table-wrapper {
+        min-width: 500px;
+    }
+
+    &.table-size-md {
+        .ant-table-wrapper {
+            min-width: 650px;
+        }
+    }
+}

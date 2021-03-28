@@ -1,0 +1,220 @@
+//google font api
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+//local fonts
+@font-face {
+    font-family: 'proxima_novabold';
+    src: url('../fonts/proxima_nova_bold-webfont.woff') format('woff'),
+        url('../fonts/proxima_nova_bold-webfont.ttf') format('truetype'),
+        url('../fonts/proxima_nova_bold-webfont.svg#proxima_novabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_novaregular';
+    src: url('../fonts/proxima_nova_regular-webfont.woff') format('woff'),
+        url('../fonts/proxima_nova_regular-webfont.ttf') format('truetype'),
+        url('../fonts/proxima_nova_regular-webfont.svg#proxima_novaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_novasemibold';
+    src: url('../fonts/proxima_nova_semibold-webfont.woff') format('woff'),
+        url('../fonts/proxima_nova_semibold-webfont.ttf') format('truetype'),
+        url('../fonts/proxima_nova_semibold-webfont.svg#proxima_novasemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+[class^="icon-"],
+[class*=" icon-"] {
+    @include iconFont();
+}
+
+
+.icon-location-outline:before {
+    content: "\e92c";
+}
+
+.icon-delete:before {
+    content: "\e92a";
+    color: #706e7b;
+}
+
+.icon-work:before {
+    content: "\e92b";
+}
+
+.icon-banner-logo:before {
+    content: "\e927";
+}
+
+.icon-order-history:before {
+    content: "\e928";
+}
+
+.icon-thin-tick:before {
+    content: "\e929";
+}
+
+.icon-home:before {
+    content: "\e926";
+}
+
+.icon-arrow-up:before {
+    content: "\e901";
+}
+
+.icon-arrow-down:before {
+    content: "\e907";
+}
+
+.icon-arrow-left:before {
+    content: "\e908";
+}
+
+.icon-arrow-right:before {
+    content: "\e90a";
+}
+
+.icon-close:before {
+    content: "\e925";
+}
+
+.icon-close-round:before {
+    content: "\e90c";
+}
+
+.icon-info:before {
+    content: "\e90d";
+}
+
+.icon-mail:before {
+    content: "\e90e";
+}
+
+.icon-card:before {
+    content: "\e90f";
+}
+
+.icon-pencil:before {
+    content: "\e910";
+}
+
+.icon-user:before {
+    content: "\e911";
+}
+
+.icon-chat:before {
+    content: "\e912";
+}
+
+.icon-help:before {
+    content: "\e913";
+}
+
+.icon-shut-down:before {
+    content: "\e914";
+}
+
+.icon-arrow-thin-right:before {
+    content: "\e915";
+}
+
+.icon-arrow-thin-left:before {
+    content: "\e916";
+}
+
+.icon-arrow-thin-up:before {
+    content: "\e917";
+}
+
+.icon-arrow-thin-down:before {
+    content: "\e918";
+}
+
+.icon-caret-down:before {
+    content: "\e919";
+}
+
+.icon-caret-up:before {
+    content: "\e91a";
+}
+
+.icon-caret-left:before {
+    content: "\e91b";
+}
+
+.icon-caret-right:before {
+    content: "\e91c";
+}
+
+.icon-phone:before {
+    content: "\e91d";
+}
+
+.icon-menu:before {
+    content: "\e91e";
+}
+
+.icon-love:before {
+    content: "\e91f";
+}
+
+.icon-love-outline:before {
+    content: "\e920";
+}
+
+.icon-plus:before {
+    content: "\e921";
+}
+
+.icon-minus:before {
+    content: "\e922";
+}
+
+.icon-tick:before {
+    content: "\e923";
+}
+
+.icon-star:before {
+    content: "\e924";
+}
+
+.icon-cart:before {
+    content: "\e900";
+}
+
+.icon-food:before {
+    content: "\e906";
+}
+
+.icon-offer:before {
+    content: "\e909";
+}
+
+.icon-offer-outline:before {
+    content: "\e902";
+}
+
+.icon-location:before {
+    content: "\e90b";
+}
+
+.icon-filter:before {
+    content: "\e903";
+}
+
+.icon-search:before {
+    content: "\e904";
+}
+
+.icon-time:before {
+    content: "\e905";
+}

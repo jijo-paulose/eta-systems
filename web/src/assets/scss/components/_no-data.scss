@@ -1,0 +1,39 @@
+//////////////////////////
+/// Component: No Data ///
+//////////////////////////
+
+.no-data-block{
+    background-color: #fff;
+    padding: 60px;
+    min-height: 200px;
+    text-align: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    .media-block{
+        margin-bottom: 30px;
+        img{
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .no-data-title{
+        font-size: 16px;
+        font-family: $title-font-bold;
+        margin-bottom: 5px;
+    }
+    .no-data-para{
+        font-size: 14px;
+        font-weight: normal;
+        color: $sub-font-color;
+        margin-bottom: 20px;
+    }
+    .no-data-button{
+        height: 36px;
+        padding: 0 25px;
+        line-height: 34px;
+        font-size: 14px;
+        font-weight: normal;
+        font-family: $title-font-semi;
+    }
+}

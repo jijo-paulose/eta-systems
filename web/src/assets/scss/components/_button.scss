@@ -1,0 +1,44 @@
+//////////////////////////
+/// Component: Buttons ///
+//////////////////////////
+
+.ant-btn {
+    font-family: $title-font;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.ant-btn-outline {
+    border: solid 2px #898989;
+    color: #354266;
+    @include border-radius(3px);
+
+    &:hover,
+    &:focus {
+        background-color: #898989;
+        border-color: #898989;
+        color: #fff;
+    }
+}
+
+.btn {
+    font-size: 14px;
+    font-weight: normal;
+    display: inline-block;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    touch-action: manipulation;
+    padding: 0;
+    letter-spacing: .01em;
+    -webkit-font-smoothing: antialiased;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #373e43;
+    background-color: transparent;
+    position: relative;
+    @include transition(all .2s ease-in);
+}

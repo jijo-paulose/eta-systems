@@ -1,0 +1,260 @@
+//mobile
+$screen-xs         : 360px !default;
+$screen-xs-min     : $screen-xs !default;
+$screen-xs-small   : ($screen-xs-min - 1) !default;
+
+$screen-phone      : 480px !default;
+$screen-phone-min  : $screen-phone !default;
+$screen-xs-medium  : ($screen-phone-min - 1) !default;
+
+$screen-xs-large-min     : 576px !default;
+$screen-xs-large-medium  : $screen-xs-large-min !default;
+$screen-xs-large         : ($screen-xs-large-medium - 1) !default;
+
+//tablet
+$screen-sm         : 768px !default;
+$screen-sm-min     : $screen-sm !default;
+$screen-tablet     : $screen-sm-min !default;
+
+//desktop medium
+$screen-md         : 992px !default;
+$screen-md-min     : $screen-md !default;
+$screen-desktop    : $screen-md-min !default;
+
+//desktop standard
+$screen-lg         : 1200px !default;
+$screen-lg-min     : $screen-lg !default;
+$screen-lg-desktop : $screen-lg-min !default;
+
+//desktop xlarge
+$screen-xlg         : 1600px !default;
+$screen-xlg-min     : $screen-xlg !default;
+$screen-xlg-desktop : $screen-xlg-min !default;
+
+//breakpoint
+$screen-xs-max     : ($screen-sm-min - 1) !default;
+$screen-sm-max     : ($screen-md-min - 1) !default;
+$screen-md-max     : ($screen-lg-min - 1) !default;
+$screen-lg-max     : ($screen-xlg-min - 1) !default;
+
+
+///////////////////////// 
+// RESPONSIVE MIXINS //
+//////////////////////// 
+
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+////////////////== 01. XS screens ==/////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
+//== A. max screen //
+
+//@include max-xs{};
+@mixin max-xs { //767
+    @media (max-width: $screen-xs-max) {
+        @content;
+    }
+} 
+
+//@include max-xs-medium{};
+@mixin max-xs-medium { //479 
+    @media (max-width: $screen-xs-medium) { 
+        @content;
+    }
+} 
+
+//@include max-xs-small{};
+@mixin max-xs-small { //359 
+    @media (max-width: $screen-xs-small) { 
+        @content;
+    }
+} 
+
+//== B. min screen //
+
+//@include min-xs-small{};
+@mixin min-xs-small { //360 
+    @media (min-width: $screen-xs-min) {
+        @content;
+    }
+} 
+
+//@include min-xs-medium{};
+@mixin min-xs-medium { //480 
+    @media (min-width: $screen-phone-min) {
+        @content;
+    }
+} 
+
+//@include min-xs-large{};
+@mixin min-xs-large { //576 
+    @media (min-width: $screen-xs-large-medium) {
+        @content;
+    }
+} 
+
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+////////////////== 02. SM screens ==/////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
+//== A. max screen //
+
+//@include max-sm{};
+@mixin max-sm { //991
+    @media (max-width: $screen-sm-max) {
+        @content;
+    }
+} 
+
+//== B. min screen //
+
+//@include min-sm{};
+@mixin min-sm { //767 
+    @media (min-width: $screen-sm-min) {
+        @content;
+    }
+} 
+
+//== C. min and max screen //
+
+//@include min-max-sm{};
+@mixin min-max-sm { //768 - 991
+    @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { 
+        @content;
+    }
+} 
+
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+////////////////== 03. MD screens ==/////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
+//== A. max screen //
+
+//@include max-md{};
+@mixin max-md { //1199
+    @media (max-width: $screen-md-max) {
+        @content;
+    }
+} 
+
+//== B. min screen //
+
+//@include min-md{};
+@mixin min-md { //992 
+    @media (min-width: $screen-md-min) {
+        @content;
+    }
+} 
+
+//== C. min and max screen //
+
+//@include min-max-md{};
+@mixin min-max-md { //992 - 1199
+    @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) { 
+        @content;
+    }
+} 
+
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+////////////////== 04. LG screens ==/////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
+//== A. max screen //
+
+//@include max-lg{};
+@mixin max-lg { //1599
+    @media (max-width: $screen-lg-max) {
+        @content;
+    }
+} 
+
+//== B. min screen //
+
+//@include min-lg{};
+@mixin min-lg { //1200 
+    @media (min-width: $screen-lg-min) {
+        @content;
+    }
+} 
+
+//== C. min and max screen //
+
+//@include min-max-lg{};
+@mixin min-max-lg { //1200 - 1599
+    @media only screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) { 
+        @content;
+    }
+} 
+
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+////////////////== 05. XLG screens ==////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
+//== A. max screen //
+
+//@include min-xlg{};
+@mixin min-xlg { //1600 
+    @media (min-width: $screen-xlg-min) {
+        @content;
+    }
+} 
+
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+///////////////RESPONSIVE MIXINS GUIDE///////////////////////////////
+/////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////// 
+
+//maximum 767px
+@include max-xs{}; 
+
+//maximum 479px
+@include max-xs-medium{}; 
+
+//maximum 359px
+@include max-xs-small{}; 
+
+//minimum 360px
+@include min-xs-small{}; 
+
+//minimum 480px
+@include min-xs-medium{}; 
+
+//maximum 991px
+@include max-sm{}; 
+
+//minimum 768px
+@include min-sm{}; 
+
+//minimum 768px and maximum 991px
+@include min-max-sm{}; 
+
+//maximum 991px
+@include max-md{}; 
+
+//minimum 992px
+@include min-md{}; 
+
+//minimum 992px and maximum 1199px
+@include min-max-md{}; 
+
+//maximum 1199px
+@include max-lg{}; 
+
+//minimum 1200px
+@include min-lg{}; 
+
+//minimum 1200px and maximum 1599px
+@include min-max-lg{}; 
+
+//minimum 1600px
+@include min-xlg{}; 

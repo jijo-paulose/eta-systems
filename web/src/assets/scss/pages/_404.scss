@@ -1,0 +1,28 @@
+///////////////////////////////////////////////
+/// PAGE: 404 Page  ///
+///////////////////////////////////////////////
+.page-not-found{
+    max-width: 300px;
+    margin: 20vh auto;
+    width: 100%;
+    text-align: center;
+    .media-block{
+        margin-bottom: 30px;
+        img{
+            display: inline-block;
+        }
+    }
+    h2{
+        font-size: 60px;
+        color: #354260;
+        font-weight: 700;
+        margin-bottom: 0;
+        line-height: 1;
+    }
+    p{
+        font-size: 16px;
+        color: #354260;
+        margin-bottom: 0;
+        font-weight: 600;
+    }
+}

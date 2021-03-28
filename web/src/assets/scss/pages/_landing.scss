@@ -1,0 +1,467 @@
+///////////////////////////////////////////////
+/// Page: Landing Page ///
+///////////////////////////////////////////////  
+
+.option-section {
+    padding: 0;
+    background: $bg-dark;
+
+    .option-wrapper {
+        display: flex;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #E6DEDC;
+
+        .sub-text {
+            margin: 0 12px;
+            font-size: 13px;
+            font-weight: 400;
+            color: $sub-font-color;
+            font-family: $font-family-base;
+        }
+
+        .square-btn {
+            font-size: 13px;
+            padding: 0 15px;
+            color: $sub-font-color;
+            background: transparent;
+            border: 1px solid #DED3D1;
+            font-family: $title-font;
+
+            &:hover {
+                color: $primary-color;
+                background: #fff;
+                border-color: #DED3D1;
+                box-shadow: 0 -2px 10px 0 rgba(189, 179, 179, 0.54);
+            }
+
+            &:first-child,
+            &:last-child {
+                @include border-radius(4px);
+            }
+        }
+
+        .ant-radio-button-wrapper-checked {
+            color: $primary-color;
+            background: #fff;
+            border-color: #DED3D1;
+            box-shadow: 0 -2px 10px 0 rgba(189, 179, 179, 0.54);
+        }
+
+        .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
+            border-color: #DED3D1;
+            box-shadow: none;
+        }
+
+        .left-block {
+            flex-grow: 1;
+        }
+
+        .right-block {
+            flex-grow: 0;
+
+            .filter-btn {
+                box-shadow: none;
+                border: none;
+                background: transparent;
+            }
+
+            .icon-filter {
+                font-size: 18px;
+            }
+        }
+    }
+
+    ///MEDIA QUERIES 
+    @include min-sm {
+        padding: 25px 0 0;
+    }
+
+    // end
+}
+
+.featured-restaurant.popular-restaurant,
+.featured-restaurant.cuisines-section {
+    .featured-slider {
+        border-bottom: 0;
+    }
+}
+
+.featured-restaurant {
+    background-color: #F9F0EF;
+
+    .featured-slider {
+        border-bottom: 1px solid #E6DEDC;
+
+        .slick-arrow {
+            border: none;
+            height: 40px;
+            width: 40px;
+            color: $primary-color;
+            background-color: #FFFFFF;
+            border-radius: 4px;
+            position: absolute;
+            cursor: pointer;
+            box-shadow: 0 -2px 10px 0 rgba(189, 179, 179, 0.54);
+
+            &:before {
+                height: 40px;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .slick-disabled {
+            box-shadow: none;
+
+            &:before {
+                color: #dddddd;
+            }
+        }
+
+        .slick-prev:before {
+            font-size: 13px;
+            content: "\e908";
+        }
+
+        .slick-next:before {
+            font-size: 13px;
+            content: "\e90a";
+        }
+
+        .slick-prev {
+            bottom: -40px;
+            font-size: 0;
+            line-height: 0;
+        }
+
+        .slick-next {
+            left: 50px;
+            font-size: 0;
+            line-height: 0;
+        }
+
+        .slick-list {
+            padding: 10px 0 20px;
+            margin: 0 -10px;
+        }
+
+        .slick-slide>div {
+            padding: 0 10px;
+        }
+
+        .featured-item-wrap {
+            display: block;
+            @include border-radius(8px);
+            overflow: hidden;
+            position: relative;
+            @include box-shadow(0 2px 12px 0 rgba(0, 0, 0, 0.11));
+
+            &:hover {
+                .media-block img {
+                    @include opacity(0.9);
+                }
+            }
+
+            .media-block {
+                height: 110px;
+                position: relative;
+                z-index: 2;
+                background-color: #eee;
+                margin: 0;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    @include transition(all 0.2s linear);
+                    object-fit: cover;
+                }
+            }
+
+            .rating-block {
+                position: absolute;
+                right: 0;
+                bottom: 20px;
+                background-color: $primary-color;
+                color: #fff;
+                font-size: 11px;
+                padding: 2px 5px 1px;
+                height: 18px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    bottom: 0;
+                    border: 9px solid $primary-color;
+                    z-index: 1;
+                    left: -9px;
+                    border-right-width: 0;
+                    border-left-color: transparent;
+                }
+
+                .icon-block {
+                    margin-right: 5px;
+                }
+            }
+
+            .content-block {
+                background-color: #fff;
+                width: 100%;
+                padding: 10px 15px;
+            }
+
+            .name-block {
+                font-size: 15px;
+                margin: 0 0 2px;
+                @include ellipsis();
+            }
+
+            .option-item.like-block {
+                margin-right: 0;
+            }
+
+            .option-item {
+                color: $sub-font-color;
+                font-size: 12px;
+                margin-right: 15px;
+
+                .icon-block {
+                    margin-right: 5px;
+                    @include opacity(0.6);
+                }
+            }
+
+            .cusines-listing {
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    ///MEDIA QUERIES  
+    @include min-sm {
+        padding: 30px 0 0;
+
+        .featured-slider {
+            padding-bottom: 70px;
+
+            .featured-item-wrap {
+                .media-block {
+                    height: 150px;
+                }
+            }
+
+            .slick-list {
+                padding: 10px 0 15px;
+            }
+        }
+
+        .option-section {
+
+            .sub-text,
+            .square-btn {
+                font-size: 15px;
+            }
+        }
+    }
+
+    @include max-md {
+        .featured-slider {
+            .featured-item-wrap {
+                .content-block {
+                    min-height: 125px;
+                }
+            }
+        }
+    }
+
+    // end
+}
+
+.cuisines-section {
+    background: #fff;
+
+    .featured-slider {
+        .featured-item-wrap {
+            box-shadow: none;
+            display: inline-block;
+
+            .media-block {
+                height: 110px;
+                @include border-radius(8px);
+
+                img {
+                    @include border-radius(8px);
+                }
+            }
+
+            .content-block {
+                padding-left: 0;
+
+                .name-block {
+                    color: #26315F;
+                }
+            }
+        }
+    }
+
+    ///MEDIA QUERIES  
+    @include min-sm {
+        .featured-slider {
+            .featured-item-wrap {
+                .media-block {
+                    height: 130px;
+                }
+            }
+
+            .slick-slide>div {
+                padding: 0 15px;
+            }
+        }
+
+        // end
+    }
+
+    @include min-md {
+        .featured-slider {
+            .featured-item-wrap {
+                .media-block {
+                    height: 180px;
+                }
+            }
+        }
+
+        // end
+    }
+}
+
+.neadby-restaurant {
+    background: #FFFFFF;
+    padding: 15px 0;
+    margin-bottom: 60px;
+
+    .v-list-Restaurants {
+        margin-top: 4px;
+    }
+
+    .list-item {
+        font-size: 0;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .media-block {
+        width: 90px;
+        height: 90px;
+        position: relative;
+        z-index: 2;
+        vertical-align: middle;
+        display: inline-block;
+        background-color: #eee;
+        margin: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            @include border-radius(8px);
+            @include transition(all 0.2s linear);
+            object-fit: cover;
+        }
+    }
+
+    .rating-block {
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        background-color: $primary-color;
+        color: #fff;
+        font-size: 11px;
+        padding: 2px 5px 1px;
+        height: 18px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            bottom: 0;
+            border: 9px solid $primary-color;
+            z-index: 1;
+            left: -9px;
+            border-right-width: 0;
+            border-left-color: transparent;
+        }
+
+        .icon-block {
+            margin-right: 5px;
+        }
+    }
+
+    .content-block {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 15px;
+        width: calc(100% - 110px);
+
+        .name-block {
+            color: #0B2031;
+            font-size: 16px;
+            margin-bottom: 5px;
+            width: 100%;
+            @include ellipsis();
+        }
+
+        .description {
+            color: #706E7B;
+            font-size: 12px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .list-options {
+            margin-bottom: 8px;
+        }
+
+        .option-item {
+            color: $sub-font-color;
+            font-size: 12px;
+            margin-right: 15px;
+
+            .icon-block {
+                margin-right: 5px;
+                @include opacity(0.6);
+            }
+        }
+    }
+
+    ///MEDIA QUERIES  
+    @include min-sm {
+        background: $bg-color;
+        padding: 40px 0;
+        margin-bottom: 0;
+
+        .v-list-Restaurants {
+            margin-top: 18px;
+            padding: 15px 25px;
+            background: #fff;
+        }
+
+        .list-item {
+            display: inline-block;
+            width: 50%;
+            padding-bottom: 30px;
+        }
+    }
+
+    @include min-md {
+        .list-item {
+            display: inline-block;
+            width: 33.33%;
+        }
+    }
+
+    // end
+}

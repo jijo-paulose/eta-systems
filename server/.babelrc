@@ -1,0 +1,17 @@
+{
+    "plugins": [
+      "transform-object-rest-spread"
+    ],
+    "presets": [
+      [
+        "env",
+        {
+          "useBuiltIns": true,
+          "uglify": true,
+          "include": ["es7.object.entries"]
+        }
+      ]
+    ],
+    "ignore": ["node_modules"]
+  }
+  
