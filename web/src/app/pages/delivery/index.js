@@ -34,8 +34,6 @@ class Home extends Component {
         await this.props.listOrder()
         this.currentActive()
     }
-   
-   
     newLocation(lat,lng) {
         polyLines.push({lat,lng})
     }
@@ -46,11 +44,11 @@ class Home extends Component {
         await this.props.genarateOrder()
     }
     currentActive(){
-        let obj = this.props.orders.find(o => o.orderState === "ACTIVE_DELIVERY");
-        console.log(obj)
-        this.setState({current:obj})
-
-
+        if(this.props.orders && this.props.orders.length){
+            let obj = this.props.orders.find(o => o.orderState === "ACTIVE_DELIVERY");
+            console.log(obj)
+            this.setState({current:obj})
+        }    
     }
     async startDelivery(item,index){
         this.setState({loading:true,index})
@@ -103,10 +101,11 @@ class Home extends Component {
                         currentData={this.state.current}
                         polyLines={polyLines}
                     />
-                    {this.props.orders ? 
+                    
                    <section className="main-content-area">
                        <center><Button type="primary" onClick={this.generateOrder.bind(this)} style={{maxWidth: "50%"}} block>Generate Multiple Order Delivery</Button></center> 
                         <div>
+                        {this.props.orders ? 
                         <center>
                             <p>Current Delivery List:</p>
                             <p><b>ETA</b></p>
@@ -124,9 +123,9 @@ class Home extends Component {
                             </Row>
                              ))
                             }
-                            </center>
+                            </center>: null }
                         </div>
-                    </section> : null }
+                    </section> 
                 </header>
             </main>
 
